@@ -467,6 +467,7 @@ MonoBehaviour:
   jumpForce: 5
   wingSound: {fileID: 8300000, guid: cb5ff0b671ca7724686e9a34c8464836, type: 3}
   objectHitSound: {fileID: 8300000, guid: 7e585d82d29f5984b8dbe86450988d4f, type: 3}
+  dieSound: {fileID: 8300000, guid: b953e1cec3330344793255fa41cd05a7, type: 3}
   spriteRenderer: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: 0a9f978431c7d28418b94ba33d92975a, type: 3}

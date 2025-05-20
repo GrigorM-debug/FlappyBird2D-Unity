@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioClip wingSound;
 
+    [SerializeField] private AudioClip objectHitSound;
+    [SerializeField] private AudioClip dieSound;
+
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [SerializeField] private Sprite[] sprites;
@@ -61,15 +64,34 @@ public class Player : MonoBehaviour
         transform.position += (Vector3)direction * Time.deltaTime;
     }
 
+    /*Changing different sprites stored in array to 
+    simulated that the bird is flying*/
     private void PlayerSpriteAnimation()
-    {   
+    {
         currentSpriteIndex++;
 
-        if (currentSpriteIndex > sprites.Length)
+        if (currentSpriteIndex >= sprites.Length)
         {
             currentSpriteIndex = 0;
         }
 
         spriteRenderer.sprite = sprites[currentSpriteIndex];
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log($"Object hit: {collision.gameObject.name}");
+
+        //Add for the pipes
+        if (collision.gameObject.tag == "Ground")
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        SoundFXManager.instance.PlaySoundFXClip(objectHitSound, transform, 1f);
+        SoundFXManager.instance.PlaySoundFXClip(dieSound, transform, 1f);
     }
 }

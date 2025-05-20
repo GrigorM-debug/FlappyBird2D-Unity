@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     private Vector2 direction;
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             SoundFXManager.instance.PlaySoundFXClip(wingSound, transform, 1f);
+
             direction = Vector2.up * jumpForce;
         }
 

@@ -12,14 +12,31 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioClip wingSound;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Sprite[] sprites;
+
+    private int currentSpriteIndex = 0;
+
+
+    private void Awake()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        InvokeRepeating(nameof(PlayerSpriteAnimation), 0.15f, 0.15f);
     }
 
     // Update is called once per frame
     private void Update()
+    {
+        PlayerMovement();
+    }
+
+    private void PlayerMovement()
     {
         //Keyboard and mouse input
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
@@ -42,6 +59,17 @@ public class Player : MonoBehaviour
         //Apply gravity
         direction.y += gravity * Time.deltaTime;
         transform.position += (Vector3)direction * Time.deltaTime;
+    }
 
+    private void PlayerSpriteAnimation()
+    {   
+        currentSpriteIndex++;
+
+        if (currentSpriteIndex > sprites.Length)
+        {
+            currentSpriteIndex = 0;
+        }
+
+        spriteRenderer.sprite = sprites[currentSpriteIndex];
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioClip objectHitSound;
     [SerializeField] private AudioClip dieSound;
+
+    [SerializeField] private AudioClip scorePointSound;
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
@@ -80,17 +83,30 @@ public class Player : MonoBehaviour
         spriteRenderer.sprite = sprites[currentSpriteIndex];
     }
 
+    //If the bird hit pipe or ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log($"Object hit: {collision.gameObject.name}");
 
         //Add for the pipes
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Pipe")
         {
             Die();
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 
+    //Triggering the scoring point
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "ScoringPoint")
+        {
+            SoundFXManager.instance.PlaySoundFXClip(scorePointSound, transform, 1f);
+            FindAnyObjectByType<GameManager>().IncreaseScore();
+        }
+    }
+
+    //Playing die sounds
     private void Die()
     {
         SoundFXManager.instance.PlaySoundFXClip(objectHitSound, transform, 1f);

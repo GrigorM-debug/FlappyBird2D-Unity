@@ -8,6 +8,7 @@ TagManager:
   - BirdAnimated
   - Pipe
   - ScoringPoint
+  - Score
   layers:
   - Default
   - TransparentFX

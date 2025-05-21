@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButtonClickHandler : MonoBehaviour
+public class StarButtonClickHandler : MonoBehaviour
 {
     [SerializeField] private AudioClip interactionSound;
 

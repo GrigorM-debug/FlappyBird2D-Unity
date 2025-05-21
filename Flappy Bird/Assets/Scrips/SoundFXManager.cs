@@ -23,12 +23,12 @@ public class SoundFXManager : MonoBehaviour
 
     public void PlaySoundFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
     {
-        Debug.LogWarning($"Audio Clip Name: {audioClip.name}");
-        Debug.LogWarning($"Spawn transform: {spawnTransform.name}");
+        // Debug.LogWarning($"Audio Clip Name: {audioClip.name}");
+        // Debug.LogWarning($"Spawn transform: {spawnTransform.name}");
 
         if (audioClip == null || audioSourceObj == null || spawnTransform == null)
         {
-            Debug.LogWarning("SoundFXManager: Missing AudioClip, audioSourceObj, or spawnTransform.");
+            //Debug.LogWarning("SoundFXManager: Missing AudioClip, audioSourceObj, or spawnTransform.");
             return;
         }
 
@@ -36,7 +36,7 @@ public class SoundFXManager : MonoBehaviour
 
         if (audioSourceObj == null)
         {
-            Debug.LogError("AudioSource component missing from prefab!");
+            // Debug.LogError("AudioSource component missing from prefab!");
             Destroy(audioSourceObj);
             return;
         }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - BirdAnimated
+  - Pipe
+  - ScoringPoint
   layers:
   - Default
   - TransparentFX

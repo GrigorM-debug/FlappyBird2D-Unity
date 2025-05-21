@@ -9,6 +9,8 @@ TagManager:
   - Pipe
   - ScoringPoint
   - Score
+  - BottomPipe
+  - TopPipe
   layers:
   - Default
   - TransparentFX

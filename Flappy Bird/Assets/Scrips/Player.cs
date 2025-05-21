@@ -86,10 +86,11 @@ public class Player : MonoBehaviour
     //If the bird hit pipe or ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log($"Object hit: {collision.gameObject.name}");
-
+            Debug.Log($"Object hit: {collision.gameObject.name}");
         //Add for the pipes
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Pipe")
+        if (collision.gameObject.tag == "Ground"
+            || collision.gameObject.tag == "BottomPipe"
+            || collision.gameObject.tag == "TopPipe")
         {
             Die();
             FindObjectOfType<GameManager>().GameOver();
@@ -101,6 +102,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "ScoringPoint")
         {
+            Debug.Log($"Scoring point entered: {collision.gameObject.name}");
             SoundFXManager.instance.PlaySoundFXClip(scorePointSound, transform, 1f);
             FindAnyObjectByType<GameManager>().IncreaseScore();
         }

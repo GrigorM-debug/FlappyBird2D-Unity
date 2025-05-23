@@ -47,3 +47,10 @@ This project is the fulfillment of a promise I made to myself back then.
 - **Data Persistence**: PlayerPrefs (for storing high scores)
 
 ---
+
+## 🙌 Acknowledgments
+
+- Thanks to the creators of the original Flappy Bird game.
+- Huge appreciation to all the YouTubers and tutorial creators who inspired me.
+
+---

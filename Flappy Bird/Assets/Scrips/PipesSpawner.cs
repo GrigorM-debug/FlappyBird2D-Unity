@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PipesSpawner : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class PipesSpawner : MonoBehaviour
     {
         GameObject pipesObject = Instantiate(pripesPrefab, transform.position, Quaternion.identity);
 
-        pipesObject.transform.position += (Vector3)Vector2.up * Random.Range(minHeight, maxHeight);
+        // pipesObject.transform.position += (Vector3)Vector2.up * Random.Range(minHeight, maxHeight);
+        float randomY = Random.Range(minHeight, maxHeight);
+
+        pipesObject.transform.position = new Vector3(
+            pipesObject.transform.position.x,
+            randomY,
+            pipesObject.transform.position.z
+        );
     }
 }

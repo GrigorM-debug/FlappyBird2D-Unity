@@ -117,5 +117,13 @@ public class Player : MonoBehaviour
     {
         SoundFXManager.instance.PlaySoundFXClip(objectHitSound, transform, 1f);
         SoundFXManager.instance.PlaySoundFXClip(dieSound, transform, 1f);
+
+        transform.eulerAngles = new Vector3(
+            transform.eulerAngles.x,
+            transform.eulerAngles.y,
+            transform.eulerAngles.z - 180
+        );
+
+        transform.position -= new Vector3(0, 5f, 0);
     }
 }

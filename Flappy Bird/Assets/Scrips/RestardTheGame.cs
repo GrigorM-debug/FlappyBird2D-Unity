@@ -11,6 +11,7 @@ public class RestardTheGame : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("Restard game button clicked");
         SoundFXManager.instance.PlaySoundFXClip(interactionSound, transform, 1f);
         SceneManager.LoadScene("FlappyBird.HomeScreen");
     }

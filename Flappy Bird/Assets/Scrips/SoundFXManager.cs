@@ -24,7 +24,6 @@ public class SoundFXManager : MonoBehaviour
     public void PlaySoundFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
     {
         Debug.LogWarning($"Audio Clip Name: {audioClip.name}");
-        Debug.LogWarning($"Spawn transform: {spawnTransform.name}");
 
         if (audioClip == null || audioSourceObj == null || spawnTransform == null)
         {

@@ -118,6 +118,7 @@ public class Player : MonoBehaviour
         SoundFXManager.instance.PlaySoundFXClip(objectHitSound, transform, 1f);
         SoundFXManager.instance.PlaySoundFXClip(dieSound, transform, 1f);
 
+        //Death animation
         transform.eulerAngles = new Vector3(
             transform.eulerAngles.x,
             transform.eulerAngles.y,

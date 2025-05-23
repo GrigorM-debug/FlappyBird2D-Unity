@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
     {
         score++;
 
-        Debug.Log($"Score: {score}");
-
         scoreText.text = score.ToString();
     }
 

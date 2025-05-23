@@ -17,11 +17,12 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip objectHitSound;
     [SerializeField] private AudioClip dieSound;
 
-    [SerializeField] private AudioClip scorePointSound;
-
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [SerializeField] private Sprite[] sprites;
+
+     //Scoring point audio
+    [SerializeField] AudioClip scorePointSound;
 
     private int currentSpriteIndex = 0;
 
@@ -97,7 +98,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //Triggering the scoring point
+    //Triggering the scoring point between the pipes
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "ScoringPoint")
@@ -105,6 +106,9 @@ public class Player : MonoBehaviour
             Debug.Log($"Scoring point entered: {collision.gameObject.name}");
             SoundFXManager.instance.PlaySoundFXClip(scorePointSound, transform, 1f);
             FindAnyObjectByType<GameManager>().IncreaseScore();
+
+            //To prevent double scoring
+            collision.gameObject.SetActive(false);
         }
     }
 

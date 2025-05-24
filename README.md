@@ -17,7 +17,7 @@ This game is a small project technically, but it means a lot to me personally. B
 
 ## 📥 How to Download and Play
 
-1. Head over to the [Releases page](https://github.com/YOUR_USERNAME/YOUR_REPO/releases) of this repository.
+1. Head over to the [Releases page](https://github.com/GrigorM-debug/FlappyBird2D-Unity/releases/tag/v2.0.0) of this repository.
 2. Download the latest `.zip` file for your platform (Windows, macOS, etc).
 3. Extract the `.zip` file.
 4. Run the `FlappyBird2D.exe` inside the extracted folder.

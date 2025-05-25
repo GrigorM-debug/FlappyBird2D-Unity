@@ -15,12 +15,16 @@ This game is a small project technically, but it means a lot to me personally. B
 
 ---
 
+## 🎮 Gameplay Demo
+
+- Demo vide link: [Youtube video](https://youtu.be/L0xLFB3BgDg)
+
 ## 📥 How to Download and Play
 
 1. Head over to the [Releases page](https://github.com/GrigorM-debug/FlappyBird2D-Unity/releases/tag/v2.0.0) of this repository.
 2. Download the latest `.zip` file for your platform (Windows, macOS, etc).
 3. Extract the `.zip` file.
-4. Run the `FlappyBird2D.exe` inside the extracted folder.
+4. Run the `Flappy Bird.exe` inside the extracted folder.
 5. Enjoy the game!
 
 > _Note: No installation is required. Just download, unzip, and play!_

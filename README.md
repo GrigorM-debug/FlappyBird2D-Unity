@@ -17,7 +17,7 @@ This game is a small project technically, but it means a lot to me personally. B
 
 ## 🎮 Gameplay Demo
 
-- Demo vide link: [Youtube video](https://youtu.be/L0xLFB3BgDg)
+- Demo video link: [Youtube video](https://youtu.be/L0xLFB3BgDg)
 
 ## 📥 How to Download and Play
 

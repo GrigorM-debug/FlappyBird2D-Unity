@@ -19,6 +19,8 @@ This game is a small project technically, but it means a lot to me personally. B
 
 - Demo video link: [Youtube video](https://youtu.be/L0xLFB3BgDg)
 
+---
+
 ## 📥 How to Download and Play
 
 1. Head over to the [Releases page](https://github.com/GrigorM-debug/FlappyBird2D-Unity/releases/tag/v2.0.0) of this repository.
